@@ -37,6 +37,12 @@ venv/
 !.env.example
 
 # Personal data (never commit these)
+# Contact details (phone, email, street address, postal code) live here rather
+# than in tracked profile files. This repo is public: city/state is enough for
+# the Location Gate to work, and everything finer only matters at CV-generation
+# time, which happens locally.
+contact.local.md
+*.local.md
 salary_data.json
 # Match at any depth: the job-scraper skill resolves `job_scraper/` relative to
 # its own directory, so these land at .claude/skills/job-scraper/job_scraper/*.

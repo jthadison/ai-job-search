@@ -102,7 +102,7 @@ Does the role and company culture match the behavioral profile?
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
 
-Base: **Cedar Falls, IA 50613** (Waterloo–Cedar Falls area). Search is **remote-first, US-wide**;
+Base: **Cedar Falls, IA** (Waterloo–Cedar Falls area). Search is **remote-first, US-wide**;
 relocation is not currently on the table.
 
 - Fully remote, US-wide: **PASS**

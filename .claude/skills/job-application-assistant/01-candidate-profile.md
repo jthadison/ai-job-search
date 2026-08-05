@@ -9,11 +9,12 @@ framework_version: 1.1.1
 
 ## Identity
 - **Name:** John C. Thadison, Jr. (goes by John Thadison)
-- **Location:** Cedar Falls, IA 50613 (Waterloo–Cedar Falls area)
-- **Phone:** +1 601-620-9459
-- **Email:** jthadison@gmail.com
-- **LinkedIn:** https://www.linkedin.com/in/johnthadison/
-- **GitHub:** https://github.com/jthadison
+- **Location:** Cedar Falls, IA (Waterloo–Cedar Falls area)
+- **Contact details:** see `contact.local.md` at the repo root — phone, email,
+  postal code and profile URLs live there. That file is **gitignored**, because
+  this repository is public and city/state is all the Location Gate needs.
+  `/apply` must read it when generating a CV or cover letter; if it is missing,
+  stop and ask rather than inventing or omitting contact details.
 - **Status:** Between roles, actively searching. Departed Moov Financial 07/2026; available immediately.
 - **Constraints:** **Remote-first, US-wide.** Based in Cedar Falls, IA — a thin local market for
   senior backend roles, so fully-remote US positions are the primary target. Not currently seeking
