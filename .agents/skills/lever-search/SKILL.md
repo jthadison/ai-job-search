@@ -76,6 +76,10 @@ Key flags:
 - `--page <n>` — 1-indexed page, 25 results per page (client-side pagination).
 - `--limit <n>` / `-n <n>` — cap results emitted.
 - `--format json|table|plain` — default `json`.
+- **`--limit` sets the PAGE SIZE here** (this portal returns its whole result set in one
+  response, so pagination is client-side). `--limit 10 --page 2` returns results 11-20.
+  For "just the top N", pass `--limit N` and omit `--page`.
+
 
 ### Fetch full job detail
 

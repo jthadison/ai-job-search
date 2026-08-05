@@ -69,6 +69,10 @@ Key flags:
 - `--pages <n>` — pages to sweep when `-q` is used (default 3, max 10).
 - `--limit <n>` / `-n <n>` — cap results emitted.
 - `--format json|table|plain` — default `json`.
+- **`--limit` is a TOTAL OUTPUT CAP here** (this portal paginates server-side, so page
+  size is fixed by the API). `--page` selects the API's page; `--limit` trims what is
+  emitted. For "just the top N", pass `--limit N` and omit `--page`.
+
 
 ### Fetch full job detail
 

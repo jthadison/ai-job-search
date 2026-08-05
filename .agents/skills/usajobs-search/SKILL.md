@@ -61,13 +61,24 @@ are read from the environment only and never written anywhere by the CLI.
 
 ### Verification status
 
-The request wiring is verified: a deliberately bad key produces a live HTTP 401
-that the CLI translates into an actionable message, so headers and URL
-construction reach USAJOBS correctly. The **response parsing has not been
-verified against live data**, because that needs a real key. The parser is built
-to USAJOBS' published response schema and its unit tests cover that schema. Run
-one `search` after adding your key and sanity-check the output before trusting a
-`/scrape` run.
+**Verified against live data on 2026-08-05**, with a real key. Both `search` and
+`detail` return correctly parsed results.
+
+That live run mattered: the parser was originally built to USAJOBS' *published*
+schema, and three defects only surfaced against real responses —
+
+1. `PositionSchedule[].Name` is **always empty**; only `Code` is populated, so
+   `schedule` was permanently `null`. Codes are now resolved against USAJOBS'
+   own `positionscheduletypes` codelist.
+2. `RateIntervalCode` is a terse `"PA"` while a sibling `Description` field holds
+   `"Per Year"` — salaries rendered as `"$85,447 - $187,093 PA"`.
+3. `PositionURI` carries an explicit `:443` port. `/scrape` dedupes on URL, so
+   the `:443` and bare forms would have counted as two distinct jobs.
+
+All three are fixed and pinned by regression tests whose fixture uses the real
+live shape rather than the idealised schema. Treat this as a caution for any
+future portal: schema-derived parsers look correct right up until they meet the
+API.
 
 ## Commands
 
@@ -88,6 +99,10 @@ Key flags (**all server-side**):
 - `--page <n>` — 1-indexed page.
 - `--limit <n>` / `-n <n>` — results per page, up to 500. Default 25.
 - `--format json|table|plain` — default `json`.
+- **`--limit` is a TOTAL OUTPUT CAP here** (this portal paginates server-side, so page
+  size is fixed by the API). `--page` selects the API's page; `--limit` trims what is
+  emitted. For "just the top N", pass `--limit N` and omit `--page`.
+
 
 ### Fetch full job detail
 
