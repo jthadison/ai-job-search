@@ -74,7 +74,13 @@ Create `.agents/skills/<name>/` with:
 These conventions are what make portal skills interchangeable for `/scrape` and for users reading any skill's docs:
 
 - **Commands:** `search` and `detail <id|url>`.
-- **Search flags:** `--query`/`-q`, `--jobage <days>` (posting age; map to the portal's parameter, note in SKILL.md if unsupported), `--page <n>` (1-indexed), `--limit <n>` (client-side cap), `--format json|table|plain` (default `json`). Add `--location`/`-l` if the portal supports location as a parameter; if it only supports location inside the keyword query, document that in SKILL.md the way `jobindex-search` does ("include the city in `--query`").
+- **Search flags:** `--query`/`-q`, `--jobage <days>` (posting age; map to the portal's parameter, note in SKILL.md if unsupported), `--page <n>` (1-indexed), `--limit <n>` (client-side cap — see the note below), `--format json|table|plain` (default `json`).
+
+  **`--limit` + `--page` interaction is portal-dependent, and a caller passing both must know which it is gettng.** Two shapes exist, forced by the underlying API:
+  - **Portal paginates server-side** (`themuse-search`, `usajobs-search`): page size is fixed by the API, so `--limit` is a *total output cap* applied after collection. `--page 2` means the API's second page.
+  - **Portal returns everything at once** (`greenhouse-search`, `lever-search`, `remotive-search`, `weworkremotely-search`): pagination is entirely client-side, so `--limit` sets the *page size* and `--page 2` returns results `limit+1 … 2×limit`.
+
+  Consequence: `--limit 10 --page 2` returns a *different slice* depending on the portal. This is deliberate — forcing one semantic would either cap a server-paginated portal below its own page size or reintroduce the truncation bug on client-paginated ones — but a caller iterating pages across portals must not assume they align. **State which shape a new portal uses in its SKILL.md.** When you only need "the top N", pass `--limit` with `--page 1` (or omit `--page`), which behaves identically everywhere. Add `--location`/`-l` if the portal supports location as a parameter; if it only supports location inside the keyword query, document that in SKILL.md the way `jobindex-search` does ("include the city in `--query`").
 - **JSON output shape:** `{ "meta": { "count": ..., "page": ... }, "results": [...] }` where each result has at least `id`, `title`, `company`, `location`, `date`, `url` (missing values are `null`, never omitted).
 - **Errors:** written to **stderr** as `{ "error": "...", "code": "..." }`, exit code `1`. Never write errors to stdout.
 - **Fetching:** browser User-Agent, exponential backoff with jitter on 429/5xx (max ~6 retries), `""`/`null` on 404 rather than a crash.
