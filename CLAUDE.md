@@ -67,8 +67,16 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
   - Revenue management and billing audit systems processing large-scale financial data
 
 ### Technical Skills
-- **Primary:** Go · C#/.NET Core & .NET Framework · Java/J2EE/Spring · SQL (PostgreSQL, SQL Server, Oracle) · microservices & distributed systems · REST API design · event-driven architecture
-- **Secondary:** TypeScript/Angular · Google Cloud Platform · OpenTelemetry · Infrastructure as Code · geospatial/GIS (dated)
+- **Primary:** Go · C#/.NET Core & .NET Framework · Java/J2EE/Spring · SQL (PostgreSQL, SQL Server, Oracle) · microservices & distributed systems · REST API design
+- **Secondary:** TypeScript/Angular · Google Cloud Platform · event-driven architecture (**1 year**, Moov 2025-2026) · OpenTelemetry · Infrastructure as Code · geospatial/GIS (dated)
+
+<!-- SCOPE GUARD: event-driven / message-based architecture is ONE year (Moov, 07/2025-07/2026,
+     50+ Go microservices on GCP) — not four years and not career-length. Brightwell was
+     distributed systems and REST/API integration on Azure, NOT event-driven. Never conflate the
+     4-year payments span with the 1-year event-driven span. Kafka is coursework only (see the
+     certifications note below); never imply production Kafka experience, including by
+     juxtaposition with an employer's Kafka usage. -->
+
 - **Domain:** Payments/fintech — **~4 recent years** (Brightwell 2022-2025 cross-border/Visa/Mastercard; Moov 2025-2026), plus 5 months DME card processing at VGM 2014-15 · enterprise SaaS 0-to-1 · large-scale financial data outside payments (Verizon revenue/billing audit 2000-2006) · government/public sector (DHS, US Navy)
 
 <!-- ACCURACY GUARD: payments experience is ~4 YEARS, not career-length. Verizon's revenue

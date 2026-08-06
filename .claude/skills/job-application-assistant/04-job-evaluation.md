@@ -60,9 +60,16 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** Go (50+ microservices, event-driven, GCP) · C#/.NET Core & .NET Framework, Entity Framework, ASP.NET MVC, Web APIs · Java/J2EE/Spring/Hibernate · distributed systems & microservices · REST API design · event-driven architecture · PostgreSQL / SQL Server / Oracle, schema design and query optimization · Microsoft Azure (DevOps, Application Insights, Blob Storage) · CI/CD pipelines · unit testing & TDD · technical mentorship and team leadership · AI-assisted engineering (Claude Code, Codex, custom skills, MCP servers)
+**Strong match areas:** Go (50+ microservices, event-driven, GCP) · C#/.NET Core & .NET Framework, Entity Framework, ASP.NET MVC, Web APIs · Java/J2EE/Spring/Hibernate · distributed systems & microservices · REST API design · PostgreSQL / SQL Server / Oracle, schema design and query optimization · Microsoft Azure (DevOps, Application Insights, Blob Storage) · CI/CD pipelines · unit testing & TDD · technical mentorship and team leadership · AI-assisted engineering (Claude Code, Codex, custom skills, MCP servers)
 
-**Moderate match areas:** Google Cloud Platform (1 year, at Moov) · OpenTelemetry / observability · TypeScript & Angular (real but secondary to backend) · Infrastructure as Code · geospatial/GIS (deep but dated — 2009-2010) · Docker & Kubernetes (**coursework only, no production evidence — do not claim as expertise**)
+**Moderate match areas:** Google Cloud Platform (1 year, at Moov) · event-driven architecture (1 year, at Moov) · OpenTelemetry / observability · TypeScript & Angular (real but secondary to backend) · Infrastructure as Code · geospatial/GIS (deep but dated — 2009-2010) · Docker & Kubernetes (**coursework only, no production evidence — do not claim as expertise**)
+
+<!-- SCOPE GUARD: event-driven architecture is ONE year (Moov 2025-2026), not four and not
+     career-length — Brightwell was distributed systems and REST/API on Azure, NOT event-driven.
+     It sits in Moderate on tenure alone; the Moov work itself is production-depth (50+ Go
+     microservices), so score a posting's event-driven requirement on recency and specificity
+     rather than years. Never let it inherit the 4-year payments span. -->
+
 
 **Weak match areas:** Python · Rust · React/Vue · mobile (iOS/Android) · data engineering / ML / data science · AWS (Azure and GCP are the documented clouds) · Kafka (coursework only) · front-end-heavy or design-led roles
 

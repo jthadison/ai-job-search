@@ -117,6 +117,20 @@ Clinton, MS
 
 ### Programming & Frameworks
 - **Go** (professional, most recent): 50+ microservices, event-driven architecture on GCP
+  <!-- SCOPE GUARD (confirmed by candidate 2026-08-05): event-driven / message-based
+       architecture experience is the ONE year at Moov (07/2025-07/2026), not four years and
+       not career-length. Brightwell was distributed systems and REST/API integration on
+       Azure, NOT event-driven. Do not write "event-driven services are what I have built
+       for the last four years" or any equivalent — that conflates the 4-year payments span
+       with the 1-year event-driven span. The honest and still-strong claim is "my most
+       recent year, across more than 50 Go microservices."
+       Related: Kafka is COURSEWORK ONLY (LinkedIn Learning). Moov's event-driven work was
+       on GCP. Never imply Kafka production experience, including by juxtaposition with an
+       employer's Kafka usage — do not pair "your stack uses Kafka" with "I build
+       event-driven services" in adjacent sentences, which reads as a claim.
+       When a posting requires more event-driven tenure than one year, address the gap
+       honestly rather than omitting it: lead with the specific (50+ Go microservices, GCP,
+       production) and let recency carry the weight duration cannot. -->
 - **C# / .NET** (expert, 20+ years): .NET Core, .NET Framework, Entity Framework, ASP.NET MVC, Web APIs
 - **Java** (expert): J2EE, Spring, Hibernate, JSF
 - **TypeScript / Angular**: full-stack SaaS front ends
@@ -134,7 +148,7 @@ Clinton, MS
        "four years in payments, current through 2026" — recency and depth, not duration. -->
 - **Large-scale financial data (adjacent, not payments)** — revenue management and billing audit
   systems at Verizon Business (2000–2006): accuracy, performance and scale over financial records
-- **Distributed systems & microservices** — event-driven architecture, API design (REST), 99.9% reliability at scale
+- **Distributed systems & microservices** — event-driven architecture (Moov, 2025-2026), API design (REST), 99.9% reliability at scale (Brightwell)
 - **Government / public sector** — Department of Homeland Security, Naval Oceanographic Office
 - **Geospatial / GIS** — ArcGIS Server, ESRI JTX, scientific data visualization
 
